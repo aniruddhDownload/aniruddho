@@ -2,7 +2,7 @@ const express = require("express")
 //const cors  = require("cors")
 const app = express();
 //app.use(cors())
-
+const port = process.env.PORT || 3000;
 let todo =
     [
         { "id": 1, "title": "Study DSA", "description": "I have to study DSA for 5 hours" },
@@ -40,6 +40,6 @@ app.get("/todoId",(req,res)=>{
     })
 })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("Running........")
 })
